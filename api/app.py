@@ -1,7 +1,9 @@
 from flask import Flask
-from mongoengine import *
+from mongoengine import connect
 
 app = Flask(__name__)
+
+connect(host='mongodb://localhost/lijamachankura')
 
 @app.route('/')
 def index():
